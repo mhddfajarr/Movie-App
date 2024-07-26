@@ -18,10 +18,10 @@
   <hr class="border-t-4 border-midnightBlue ">
 
   <div>
-    <div v-if="showVideo" class="fixed inset-0 bg-black bg-opacity-75 lg:px-28 px-20 flex items-center justify-center z-50">
+    <div v-if="showVideo" class="fixed inset-0 bg-black bg-opacity-75 lg:px-28 md:px-20 px-7 flex items-center justify-center z-50">
       <div class="relative bg-white rounded-lg  max-w-4xl h-auto w-full">
         <!-- Close Button -->
-        <button @click="showVideo = false" class="absolute -top-7 -right-5 text-red-700 hover:text-red-600 text-2xl bg-white rounded-full w-12 h-12 flex items-center justify-center">
+        <button @click="showVideo = false" class="absolute lg:-top-7 lg:-right-5 -top-4 -right-2 text-red-700 hover:text-red-600 lg:text-2xl text-lg bg-white rounded-full lg:w-12 lg:h-12 w-8 h-8 flex items-center justify-center">
           <i class="fas fa-times"></i>
         </button>
 
@@ -38,7 +38,7 @@
         <div class="absolute inset-0 bg-black opacity-25"></div>
     </div>
     <!-- Konten lain yang akan menimpa gambar -->
-    <div class="relative container mx-auto px-16 py-8">
+    <div class="relative container mx-auto lg:px-16 lg:py-8 px-6">
         <div class="flex flex-col md:flex-row gap-6">
             <!-- Image Column -->
             <div class="flex-shrink-0 w-full md:w-1/3 flex items-center justify-center md:mt-4 mt-16 lg:mt-0">
