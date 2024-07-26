@@ -1,3 +1,73 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+  }
+
+.swiper-container {
+    width: 80%;
+    position: relative; 
+    border-radius: 10px;
+    background-color: rgba(2, 6, 23, 0.1);
+    box-shadow: inset -20px 0 15px -10px rgba(255, 255, 255, 0.2), /* Shadow on the left */
+              inset 20px 0 15px -10px rgba(255, 255, 255, 0.2); 
+  }
+  .swiper-container-actors {
+    position: relative; 
+    border-radius: 10px;
+    background-color: rgba(2, 6, 23, 0.1);
+    box-shadow: inset -20px 0 15px -10px rgba(255, 255, 255, 0.2), /* Shadow on the left */
+              inset 20px 0 15px -10px rgba(255, 255, 255, 0.2); 
+  }
+  
+  .swiper-slide {
+    display: flex;
+    position: relative; 
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Atur lebar agar pas dengan `slides-per-view` */
+  }
+  
+  .bg-swiper {
+    width: 100%;
+    background-color: #21242e;
+    height: 330px;
+    /* background: #000; */
+    /* height: 100%;  */
+  }
+  .bg-swiper-actors {
+    width: 100%;
+    background-color: #21242e;
+    /* background: #000; */
+    /* height: 100%;  */
+  }
+  
+
+  /* Mengatur warna bullet pagination dengan kelas kustom */
+  .swiper-pagination-bullet {
+    background-color: white !important; /* Warna putih untuk bullet pagination */
+  }
+  
+  /* Mengatur warna bullet pagination yang aktif dengan kelas kustom */
+  .swiper-pagination-bullet-active {
+    background-color: #0d6efd !important; /* Warna merah penuh untuk bullet pagination aktif */
+  }
+  
+  /* Mengatur opacity bullet pagination yang tidak aktif dengan kelas kustom */
+  .swiper-pagination-testClass:not(.swiper-pagination-bullet-active) {
+    opacity: 0.9; /* Opacity untuk bullet pagination yang tidak aktif */
+  }
+  .movie-card {
+    background-color: #e2e8f0;
+    border-radius: 0.5rem; /* Rounded corners */
+    overflow: hidden; /* Hide overflowing content */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.6), /* Shadow with white color */
+                0 0 25px rgba(255, 255, 255, 0.3); /* Additional shadow for depth */
+  }
+
+  .card-detail-movie{
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.6), /* Shadow with white color */
+    0 0 25px rgba(255, 255, 255, 0.3); 
+  }
