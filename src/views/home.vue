@@ -58,6 +58,20 @@
       placeholder="Search movie..." 
       v-model="search" 
     />
+    <div v-if="spinner" class="absolute inset-y-0 right-3 flex items-center pr-3">
+        <!-- Example spinner icon, replace with your icon -->
+        <svg class="w-6 h-6 text-blue-500 animate-spin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+          <path 
+            fill="none" 
+            stroke="currentColor" 
+            stroke-width="5" 
+            stroke-linecap="round" 
+            d="M25,5A20,20 0 1,1 5,25A20,20 0 0,1 25,5 M25,5A20,20 0 1,1 25,45" 
+            stroke-dasharray="31.4 31.4" 
+            stroke-dashoffset="0"
+          />
+        </svg>
+      </div>
     <ul v-if="search" class="mt-2 bg-white border border-gray-300 rounded-lg shadow-md absolute w-[22rem] lg:w-[34rem] z-50">
       <li v-for="movie in searchMovie" :key="movie.id" @click="goToDetail(movie.id)" class="px-2 cursor-pointer py-2 hover:bg-gray-100 hover:rounded-lg flex items-center">
         <img :src="'https://image.tmdb.org/t/p/w92' + movie.poster_path" alt="Poster" class="w-12 h-auto mr-4">
@@ -113,6 +127,7 @@ export default {
   data() {
     return {
       backgroundImage,
+      spinner: false,
       search: '',
       searchMovie: [],
       movieList: [],
@@ -267,9 +282,12 @@ export default {
   },
   watch:{
     search() {
+      this.spinner = true;
       if (this.search.length > 0) {
+        this.spinner = false;
         this.getSearchMovie(); // Panggil metode pencarian setiap kali nilai search berubah jika ada input
       } else {
+        this.spinner = false;
         this.searchMovie = []; // Hapus hasil pencarian jika input kosong
       }
     }
