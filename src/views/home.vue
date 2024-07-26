@@ -70,7 +70,7 @@
   </div>
 
     <div class="container mx-auto py-10 lg:px-40 md:px-15 sm:px-12 mt-11 px-10 mb-20">
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
         <div class="movie-card cursor-pointer" @click="goToDetail(movie.id)" v-for="movie in movieList">
           <img class="w-full h-60 object-cover" :src="'https://image.tmdb.org/t/p/w500' + movie.poster_path" alt="Movie 1">
           <div class="p-4">

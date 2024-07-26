@@ -63,8 +63,8 @@ html {
     background-color: #e2e8f0;
     border-radius: 0.5rem; /* Rounded corners */
     overflow: hidden; /* Hide overflowing content */
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.6), /* Shadow with white color */
-                0 0 25px rgba(255, 255, 255, 0.3); /* Additional shadow for depth */
+    /* box-shadow: 0 4px 8px rgba(255, 255, 255, 0.6),
+                0 0 25px rgba(255, 255, 255, 0.3);  */
   }
 
   .card-detail-movie{
