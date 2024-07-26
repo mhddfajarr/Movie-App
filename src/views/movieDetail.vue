@@ -77,8 +77,8 @@
     </div>
 </div>
 
-    <div class="container mx-auto px-16 lg:py-16 pb-16 w-full">
-      <h2 class="text-white lg:text-2xl text-xl font-semibold mb-4">Starring Cast Members</h2>
+    <div class="container mx-auto px-6 lg:px-16 lg:py-16 pb-16 w-full">
+      <p class="text-white lg:text-2xl text-xl font-semibold mb-4">Starring Cast Members</p>
       <div class="swiper-container-actors mb-10 px-4 py-4 max-w-full">
         <Swiper 
                 :breakpoints="breakpoints"
@@ -127,7 +127,7 @@ export default {
       detailMovie: {},
       breakpoints: {
         380:{
-          slidesPerView: 3,
+          slidesPerView: 4,
         },
         // when window width is >= 640px
         640: {
@@ -182,7 +182,6 @@ export default {
       try {
         const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?language=en-US`, options);
         const data = await response.json();
-        console.log(data)
         this.detailMovie = data;
       } catch (err) {
         console.error(err);
@@ -201,7 +200,6 @@ export default {
         const data = await response.json();
         const trailer = data.results.find(video => video.type === 'Trailer');
         this.trailerKey = trailer ? trailer.key : null;
-        console.log(this.trailerKey)
       } catch (err) {
         console.error(err);
       }
@@ -219,7 +217,6 @@ export default {
         const data = await response.json();
         const actors = data.cast
         this.actors = actors;
-        console.log(this.actors);
       } catch (err) {
         console.error(err);
       }
