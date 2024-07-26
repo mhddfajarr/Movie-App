@@ -48,7 +48,7 @@
     
     <div class="w-full flex flex-col items-center justify-center text-center pt-10">
       <h1 class="sm:text-4xl md:text-4xl lg:text-5xl text-3xl font-bold text-white mb-2">Discover Your Favorite Movies, Now</h1>
-      <p class="text-sm lg:text-lg text-slate-500 mb-7 px-30 sm:px-40 md:px-30 lg:px-48 ">Explore detailed information about your favorite films, from intriguing facts to captivating plotlines. Dive deeper into what makes each movie unique and enrich your viewing experience with our comprehensive insights.</p>
+      <p class="text-sm lg:text-lg text-slate-500 mb-7 px-4 sm:px-40 md:px-30 lg:px-48 ">Explore detailed information about your favorite films, from intriguing facts to captivating plotlines. Dive deeper into what makes each movie unique and enrich your viewing experience with our comprehensive insights.</p>
     </div>
 
     <div class="w-full lg:max-w-xl md:max-w-xl max-w-sm px-4 relative">

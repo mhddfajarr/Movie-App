@@ -78,7 +78,7 @@
 </div>
 
     <div class="container mx-auto px-16 lg:py-16 pb-16 w-full">
-      <h2 class="text-white text-2xl font-semibold mb-4">Starring Cast Members</h2>
+      <h2 class="text-white lg:text-2xl text-xl font-semibold mb-4">Starring Cast Members</h2>
       <div class="swiper-container-actors mb-10 px-4 py-4 max-w-full">
         <Swiper 
                 :breakpoints="breakpoints"
