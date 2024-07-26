@@ -86,7 +86,7 @@
                 :pagination="{ dynamicBullets: true, bulletClass: 'swiper-pagination-bullet swiper-pagination-testClass' }"
                 :modules="modules">
           <SwiperSlide v-for="(actor, index) in actors" :key="index">
-            <div class="bg-swiper-actors h-72 md:h-72 rounded-lg overflow-hidden text-center mb-7">
+            <div class="bg-swiper-actors h-60 lg:h-72 md:h-72 rounded-lg overflow-hidden text-center mb-7">
               <img :src="actor.profile_path 
                   ? 'https://image.tmdb.org/t/p/w500' + actor.profile_path 
                   : DefaultImage"  :alt="actor.name" class="w-auto h-auto mx-auto ">
@@ -127,7 +127,7 @@ export default {
       detailMovie: {},
       breakpoints: {
         380:{
-          slidesPerView: 2,
+          slidesPerView: 3,
         },
         // when window width is >= 640px
         640: {
