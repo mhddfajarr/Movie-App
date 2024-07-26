@@ -58,11 +58,15 @@
       placeholder="Search movie..." 
       v-model="search" 
     />
-    <ul  class="mt-2 bg-white border border-gray-300 rounded-lg shadow-md absolute w-[22rem] lg:w-full z-50">
+    <ul v-if="search" class="mt-2 bg-white border border-gray-300 rounded-lg shadow-md absolute w-[22rem] lg:w-[34rem] z-50">
       <li v-for="movie in searchMovie" :key="movie.id" @click="goToDetail(movie.id)" class="px-2 cursor-pointer py-2 hover:bg-gray-100 hover:rounded-lg flex items-center">
         <img :src="'https://image.tmdb.org/t/p/w92' + movie.poster_path" alt="Poster" class="w-12 h-auto mr-4">
         <p class="font-bold">{{ movie.title }} <span class="text-slate-400 font-normal">({{ formatYear(movie.release_date) }})</span></p>
       </li>
+      <li class="px-2 py-2">
+        <p  class="mt-2 text-center text-gray-500">Movie not found.</p>
+      </li>
+      
     </ul>
   </div>
 
