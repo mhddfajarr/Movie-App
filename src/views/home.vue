@@ -2,7 +2,7 @@
     <section id="home" class="h-screen flex items-center justify-center bg-gray-900" :style="{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }">
         <div class="text-center">
             <h1 class="lg:text-6xl text-4xl font-bold font-sans text-white ">Explore In-Depth Details of Every Movie</h1>
-            <p class="lg:text-2xl text:lg text-white font-sans mt-6 mb-6">Dive deep into movie details and learn everything about the films you love.</p>
+            <p class="lg:text-2xl text:lg text-white px-4 font-sans mt-6 mb-6">Dive deep into movie details and learn everything about the films you love.</p>
             <button @click="scrollToSection" class="bg-primary text-white px-6 py-3 font-bold text-xl hover:bg-slate-800 font-sans rounded">Explore <i class="fas fa-chevron-right ml-2"></i></button>
         </div>
     </section>
