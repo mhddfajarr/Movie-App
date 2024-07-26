@@ -63,10 +63,9 @@
         <img :src="'https://image.tmdb.org/t/p/w92' + movie.poster_path" alt="Poster" class="w-12 h-auto mr-4">
         <p class="font-bold">{{ movie.title }} <span class="text-slate-400 font-normal">({{ formatYear(movie.release_date) }})</span></p>
       </li>
-      <li class="px-2 py-2">
+      <li v-if="notFound" class="px-2 py-2">
         <p  class="mt-2 text-center text-gray-500">Movie not found.</p>
       </li>
-      
     </ul>
   </div>
 
@@ -252,8 +251,15 @@ export default {
       try {
         const response = await fetch(`https://api.themoviedb.org/3/search/movie?query=${search}&include_adult=false&language=en-US&page=1`, options)
         const data = await response.json();
-        this.searchMovie = data.results;
-        console.log(this.searchMovie)
+
+        if (data.results.length === 0) {
+          this.notFound = true; // Tidak ada hasil pencarian
+          this.searchMovie = []; // Hapus hasil pencarian
+        } else {
+          this.searchMovie = data.results;
+          this.notFound = false; // Ada hasil pencarian
+        }
+        console.log(this.notFound)
       } catch (err) {
         console.error(err);
       }
